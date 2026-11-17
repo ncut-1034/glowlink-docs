@@ -1,6 +1,8 @@
 {
   "title": "智能体",
   "pages": [
-    "workflow"
+    "knowledge",
+    "workflow",
+    "scenarios"
   ]
 }

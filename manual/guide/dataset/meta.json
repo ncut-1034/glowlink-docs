@@ -1,6 +1,9 @@
 {
   "title": "知识库",
   "pages": [
+    "import",
+    "training",
+    "wiki",
     "search-test"
   ]
 }

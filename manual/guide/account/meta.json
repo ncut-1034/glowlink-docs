@@ -4,6 +4,7 @@
     "teams",
     "permissions",
     "models",
-    "usage"
+    "usage",
+    "access"
   ]
 }
