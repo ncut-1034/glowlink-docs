@@ -1,0 +1,130 @@
+.manual-site {
+  --color-fd-primary: #684fb2;
+  --manual-accent: #9a7df2;
+  --manual-tint: #f7f4ff;
+  --manual-line: #ded4ff;
+  --manual-surface: #fff;
+  --manual-text: #241c38;
+  --manual-muted: #5f526f;
+}
+
+.dark .manual-site {
+  --color-fd-primary: #cbbbff;
+  --manual-tint: #241c38;
+  --manual-line: #49386a;
+  --manual-surface: #1c1628;
+  --manual-text: #f7f4ff;
+  --manual-muted: #c9bddf;
+}
+
+.manual-site :is(#nd-sidebar, #nd-sidebar-mobile) {
+  background-color: var(--manual-tint);
+}
+
+.manual-site :is(#nd-sidebar, #nd-sidebar-mobile) a[aria-current='page'] {
+  color: var(--color-fd-primary);
+  background: var(--manual-line);
+}
+
+.manual-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--manual-text);
+  font-weight: 750;
+}
+
+.manual-brand svg,
+.manual-chapter-icon {
+  color: var(--color-fd-primary);
+}
+
+.manual-brand svg {
+  inline-size: 1.15rem;
+  block-size: 1.15rem;
+}
+
+.manual-version {
+  padding-inline: 0.5rem;
+  color: var(--manual-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.manual-hero {
+  padding: clamp(1.5rem, 1rem + 3vw, 3.5rem);
+  border: 1px solid var(--manual-line);
+  border-radius: 1.5rem;
+  background: linear-gradient(115deg, var(--manual-tint), var(--manual-surface));
+}
+
+.manual-hero h1 {
+  font-size: clamp(1.875rem, 1.475rem + 2vw, 3.125rem);
+  color: var(--manual-text);
+}
+
+.manual-site :is(.manual-hero, .manual-article-header) p {
+  margin-block-end: 0;
+  color: var(--manual-muted);
+  line-height: 1.7;
+}
+
+.manual-article-header {
+  padding-block-end: 1.25rem;
+  border-block-end: 2px solid var(--manual-line);
+}
+
+.manual-chapters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: 1rem;
+  margin-block: 1.25rem;
+}
+
+.manual-chapter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  block-size: 100%;
+  padding: 1.25rem;
+  border: 1px solid var(--manual-line);
+  border-radius: 1rem;
+  background: var(--manual-surface);
+  color: var(--manual-text);
+}
+
+.manual-chapter:hover {
+  border-color: var(--manual-accent);
+  background: var(--manual-tint);
+}
+
+.manual-chapter:focus-visible {
+  outline: 2px solid var(--color-fd-primary);
+  outline-offset: 3px;
+}
+
+.manual-chapter-icon {
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 0.65rem;
+  background: var(--manual-tint);
+}
+
+.manual-chapter-arrow {
+  position: absolute;
+  inset-block-start: 1.25rem;
+  inset-inline-end: 1.25rem;
+  inline-size: 1rem;
+  color: var(--color-fd-primary);
+}
+
+.manual-chapter strong {
+  font-size: 1.125rem;
+}
+
+.manual-chapter span {
+  color: var(--manual-muted);
+  font-size: 0.875rem;
+  line-height: 1.65;
+}

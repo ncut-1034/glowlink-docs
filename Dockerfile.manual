@@ -1,0 +1,11 @@
+FROM node:24.16.0-alpine
+
+WORKDIR /app
+COPY --chown=node:node . .
+ARG APP_DIR
+WORKDIR /app${APP_DIR}
+
+ENV NODE_ENV=production NEXT_TELEMETRY_DISABLED=1 HOSTNAME=0.0.0.0 PORT=3000
+USER node
+EXPOSE 3000
+CMD ["node", "server.js"]
